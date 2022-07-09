@@ -1,5 +1,10 @@
 require('dotenv').config()
 
+// attempt to fix error status 137
+var port = process.env.PORT || 8080;
+var server=app.listen(port,function() {
+    console.log("app running on port 8080"); });
+
 const Discord = require('discord.js')
 const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_MESSAGE_REACTIONS"] })
 
